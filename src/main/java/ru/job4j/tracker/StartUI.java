@@ -13,7 +13,6 @@ public class StartUI {
         Tracker objTracker = new Tracker();
         objTracker.add(item);
 
-        Item itemId = new Item();
         System.out.println(objTracker.findById(1));
     }
 }
