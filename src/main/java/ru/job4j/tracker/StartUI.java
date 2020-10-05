@@ -45,8 +45,8 @@ public class StartUI {
             } else if (select == 4) {
                 System.out.println("=== Find item by Id ===");
                 int id = Integer.valueOf(input.askStr("Enter ID of item: "));
-                Item item = new Item();
-                if ((item = tracker.findById(id)) == null) {
+                Item item = tracker.findById(id);
+                if (item == null) {
                     System.out.println("Заявка с таким id не найдена");
                 } else {
                     System.out.println("ID: " + item.getId() + " = name:" + item.getName());
