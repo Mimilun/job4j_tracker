@@ -9,6 +9,11 @@ public class StartUI {
         tracker.add(item);
     }
 
+    public static void showAllItems(Tracker tracker) {
+        Item[] items = tracker.findAll();
+        StartUI.showItems(items);
+    }
+
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ===");
         int id = Integer.valueOf(input.askStr("Enter ID of item: "));
@@ -51,7 +56,7 @@ public class StartUI {
         if (items.length == 0) {
             System.out.println("Заявки с таким именем не найдены");
         } else {
-            StartUI.showItems(tracker); //вопрос в коментарии
+            StartUI.showItems(items);
         }
     }
 
@@ -65,7 +70,7 @@ public class StartUI {
                 StartUI.createItem(input, tracker);
 
             } else if (select == 1) {
-                StartUI.showItems(tracker);
+                StartUI.showAllItems(tracker);
 
             } else if (select == 2) {
                 StartUI.replaceItem(input, tracker);
@@ -97,8 +102,7 @@ public class StartUI {
         System.out.println("6. Exit Program");
     }
 
-    private static void showItems(Tracker tracker) {
-        Item[] items = tracker.findAll();
+    private static void showItems(Item[] items) {
         for (int i = 0; i < items.length; i++) {
             System.out.println("ID: " + items[i].getId() + " = name:" + items[i].getName());
         }
