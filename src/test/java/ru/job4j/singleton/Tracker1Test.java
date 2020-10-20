@@ -3,6 +3,8 @@ package ru.job4j.singleton;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import org.junit.Test;
+import ru.job4j.tracker.Item;
+import ru.job4j.tracker.Tracker;
 
 
 public class Tracker1Test {
@@ -10,9 +12,11 @@ public class Tracker1Test {
     @Test
     public void Tracker1EnumTest () {
         Tracker1 tracker = Tracker1.INSTANCE;
-        tracker.setRetr(5);
-        Tracker1 tracker2 = Tracker1.INSTANCE;
-        assertThat(tracker2.getRetr(), is(5));
+        Tracker tr = tracker.getTracker();
+        Item item = new Item("Own");
+        tr.add(item);
+        Tracker tr2 = Tracker1.INSTANCE.getTracker();
+        assertThat(tr2.indexOf(1), is(0));
     }
 
     @Test

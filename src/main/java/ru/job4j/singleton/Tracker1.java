@@ -2,19 +2,15 @@
 
 package ru.job4j.singleton;
 
+import ru.job4j.tracker.Tracker;
+
 public enum Tracker1 {
 
     INSTANCE;
 
-    private int retr = 0;
+    private Tracker track = new Tracker();
 
-    public void Tracker1 () {
-
-    }
-    public int getRetr() {
-        return retr;
-    }
-    public void setRetr(int x) {
-        retr = x;
+    public Tracker getTracker() {
+        return track;
     }
 }
