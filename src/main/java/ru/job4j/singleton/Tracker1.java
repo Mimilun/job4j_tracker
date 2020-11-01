@@ -8,9 +8,10 @@ public enum Tracker1 {
 
     INSTANCE;
 
-    private Tracker track = new Tracker();
+    private final Tracker track = new Tracker();
 
     public Tracker getTracker() {
+
         return track;
     }
 }
