@@ -52,10 +52,11 @@ public class Tracker {
         return rls;
     }
 
-    public Object delete(int id) {
+    public boolean delete(int id) {
         int index = indexOf(id);
         if (index != -1) {
-            return items.remove(index);
+            items.remove(index);
+            return true;
         }
         return false;
     }
