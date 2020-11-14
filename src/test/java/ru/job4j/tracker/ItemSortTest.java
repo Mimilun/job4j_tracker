@@ -19,7 +19,6 @@ public class ItemSortTest {
         item = new Item("A");
         tracker.add(item);
         List<Item> items = tracker.findAll();
-        //ItemSort.sortByIdUp(items);
         items.sort(new SortByIdUp());
 
         String expect = "[Item: id=1, name='B', Item: id=2, name='C', Item: id=3, name='A']";
@@ -37,7 +36,6 @@ public class ItemSortTest {
         item = new Item("A");
         tracker.add(item);
         List<Item> items = tracker.findAll();
-        //ItemSort.sortByIdDown(items);
         items.sort(new SortByIdDown());
 
         String expect = "[Item: id=3, name='A', Item: id=2, name='C', Item: id=1, name='B']";
@@ -55,7 +53,6 @@ public class ItemSortTest {
         item = new Item("A");
         tracker.add(item);
         List<Item> items = tracker.findAll();
-        //ItemSort.sortByNameUp(items);
         items.sort(new SortByNameUp());
 
         String expect = "[Item: id=3, name='A', Item: id=1, name='B', Item: id=2, name='C']";
@@ -73,7 +70,6 @@ public class ItemSortTest {
         item = new Item("A");
         tracker.add(item);
         List<Item> items = tracker.findAll();
-        ItemSort.sortByNameDown(items);
         items.sort(new SortByNameDown());
 
         String expect = "[Item: id=2, name='C', Item: id=1, name='B', Item: id=3, name='A']";
