@@ -1,16 +1,16 @@
 package ru.job4j.singleton;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 public class Tracker1Test {
 
     @Test
-    public void Tracker1EnumTest () {
+    public void tracker1EnumTest() {
         Tracker1 tracker = Tracker1.INSTANCE;
         Tracker tr = tracker.getTracker();
         Item item = new Item("Own");
@@ -20,7 +20,7 @@ public class Tracker1Test {
     }
 
     @Test
-    public void Tracker2Test () {
+    public void tracker2Test() {
         Tracker2 tracker = Tracker2.getInstance();
         tracker.setRetr(5);
         Tracker2 tracker2 = Tracker2.getInstance();
@@ -28,7 +28,7 @@ public class Tracker1Test {
     }
 
     @Test
-    public void Tracker3Test () {
+    public void tracker3Test() {
         Tracker3 tracker = Tracker3.getInstance();
         tracker.setRetr(5);
         Tracker3 tracker2 = Tracker3.getInstance();
@@ -36,7 +36,7 @@ public class Tracker1Test {
     }
 
     @Test
-    public void Tracker4Test () {
+    public void tracker4Test() {
         Tracker4 tracker = Tracker4.getInstance();
         tracker.setRetr(5);
         Tracker4 tracker2 = Tracker4.getInstance();

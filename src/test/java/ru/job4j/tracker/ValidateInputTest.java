@@ -29,6 +29,7 @@ public class ValidateInputTest {
         assertThat(selected, is(3));
 
     }
+
     @Test
     public void whenNotValidInput() {
         Output out = new StubOutput();

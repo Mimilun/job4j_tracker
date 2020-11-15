@@ -4,9 +4,8 @@ package ru.job4j.singleton;
 
 public class Tracker3 {
 
-    private int retr = 0;
-
     public static final Tracker3 INSTANCE = new Tracker3();
+    private int retr = 0;
 
     private Tracker3() {
 

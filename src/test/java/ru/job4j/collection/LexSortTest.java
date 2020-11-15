@@ -25,7 +25,7 @@ public class LexSortTest {
     }
 
     @Test
-    public void sortNum1_3_2and2_5and10() {
+    public void sortNum132and25and10() {
         String[] input = {
                 "10. Task.",
                 "1.3.2 Task.",
