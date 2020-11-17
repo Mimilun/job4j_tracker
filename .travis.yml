@@ -17,8 +17,8 @@ notifications:
     recipients:
       - mimilun@mail.ru
     on_success: never # default: change
-    on_failure: always # defa,ult: always
+    on_failure: always # default: always
 
 env:
   global:
-    - CODECOV_TOKEN="75a3c18b-fec3-4c97-8090-34931a4d00a5"
+    - CODECOV_TOKEN="baaa8833-a90c-4946-80ce-5eac9dd334e9"
