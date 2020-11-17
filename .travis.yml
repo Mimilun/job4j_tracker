@@ -15,7 +15,7 @@ after_success:
 notifications:
   email:
     recipients:
-      - mimilun1@mail.ru
+      - mimilun@mail.ru
     on_success: never # default: change
     on_failure: always # default: always
 
