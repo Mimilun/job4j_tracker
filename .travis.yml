@@ -11,14 +11,14 @@ sudo: false
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
-# Отправлять уведомление на почту mimilun@mail.ru (Изменить на свою) если сборка упала
+# Отправлять уведомление на почтуyouremail@smtp.ru(Изменить на свою) если сборка упала
 notifications:
   email:
     recipients:
       - mimilun@mail.ru
     on_success: never # default: change
-    on_failure: always # default: always
+    on_failure: always # defa,ult: always
 
-    env:
-      global:
-        - CODECOV_TOKEN="baaa8833-a90c-4946-80ce-5eac9dd334e9"
+env:
+  global:
+    - CODECOV_TOKEN="baaa8833-a90c-4946-80ce-5eac9dd334e9"
