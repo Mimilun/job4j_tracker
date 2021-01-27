@@ -1,6 +1,11 @@
 package ru.job4j.collection;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
@@ -26,4 +31,29 @@ public class DepDescCompTest {
         assertThat(rsl, lessThan(0));
     }
 
+    @Test
+    public void sortDown() {
+        List<String> rsl = new ArrayList<>(Arrays.asList(
+                "K1/SK1",
+                "K1/SK1/SSK2",
+                "K2",
+                "K2/SK1/SSK1",
+                "K1",
+                "K1/SK1/SSK1",
+                "K1/SK2",
+                "K2/SK1",
+                "K2/SK1/SSK2"));
+        List<String> expect = Arrays.asList(
+                "K2",
+                "K2/SK1",
+                "K2/SK1/SSK1",
+                "K2/SK1/SSK2",
+                "K1",
+                "K1/SK1",
+                "K1/SK1/SSK1",
+                "K1/SK1/SSK2",
+                "K1/SK2");
+        Departments.sortDesc(rsl);
+        Assert.assertEquals(expect, rsl);
+    }
 }
