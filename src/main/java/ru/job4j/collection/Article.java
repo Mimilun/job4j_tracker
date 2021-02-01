@@ -26,14 +26,15 @@ public class Article {
 
         boolean res = true;
         for (String s : arrLine) {
-
-                if (mapOr.get(s) == null) {
-                    res = false;
-                } else if (mapOr.get(s) > 1) {
-                    mapOr.put(s, mapOr.get(s) - 1);
-                } else {
-                    mapOr.remove(s);
-                }
+            Integer i = mapOr.get(s);
+            if (i == null) {
+                res = false;
+                break;
+            } else if (i > 1) {
+                mapOr.put(s, i - 1);
+            } else {
+                mapOr.remove(s);
+            }
         }
         return res;
     }
