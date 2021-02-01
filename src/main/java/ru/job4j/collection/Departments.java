@@ -13,10 +13,7 @@ public class Departments {
                 start = start + "/";
             }
         }
-        List<String> rsl = new ArrayList<>(tmp);
-//        sortAsc(rsl);
-//        sortDesc(rsl);
-        return rsl;
+        return new ArrayList<>(tmp);
     }
 
     public static void sortAsc(List<String> orgs) {
@@ -26,9 +23,4 @@ public class Departments {
     public static void sortDesc(List<String> orgs) {
         orgs.sort(new DepDescComp());
     }
-
-//    public static void main(String[] args) {
-//        List<String> deps = new ArrayList<>(Arrays.asList("k2", "k1/sk1"));
-//        System.out.println(fillGaps(deps));
-//    }
 }
