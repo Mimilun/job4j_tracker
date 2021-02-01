@@ -12,15 +12,29 @@ public class Article {
         String[] arrLine = line.split(" ");
 
         Map<String, Integer> mapOr = new HashMap<>();
-        final int value = 0;
 
         for (String s : arrOr) {
-            mapOr.put(s, value);
+            if (mapOr.containsKey(s)) {
+                mapOr.put(s, mapOr.get(s) + 1);
+            } else {
+                mapOr.put(s, 1);
+            }
+
         }
+
+        System.out.println(mapOr);
 
         boolean res = true;
         for (String s : arrLine) {
-            if (!mapOr.containsKey(s)) {
+            try {
+                if (mapOr.get(s) > 1) {
+
+                    mapOr.put(s, mapOr.get(s) - 1);
+
+                } else {
+                    mapOr.remove(s);
+                }
+            } catch (NullPointerException npe) {
                 res = false;
                 break;
             }
@@ -28,3 +42,4 @@ public class Article {
         return res;
     }
 }
+
