@@ -10,6 +10,7 @@ public class PangramTest {
         boolean b = Pangram.checkString(str);
         Assert.assertTrue(b);
     }
+
     @Test
     public void checkStringFalse() {
         String str = "ackdaws love my big sphinx of quartz";

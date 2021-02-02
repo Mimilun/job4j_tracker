@@ -19,6 +19,7 @@ public class Main {
 
         test(listAnimal);
         test(listDog);
+
     }
 
     public static void test(List<? extends Animal> l) {
