@@ -19,7 +19,7 @@ public class ProfilesTest {
         List<Profile> listProfile = List.of(new Profile(adr1), new Profile(adr2), new Profile(adr3),
                 new Profile(adr4), new Profile(adr5), new Profile(adr6));
         Profiles profiles = new Profiles();
-        List<Address> expected = List.of(adr1, adr2, adr3, adr4, adr5, adr6);
+        List<Address> expected = List.of(adr3, adr1, adr2, adr5);
         List<Address> res = profiles.collect(listProfile);
 
         Assert.assertEquals(expected, res);
