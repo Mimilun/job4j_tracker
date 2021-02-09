@@ -11,7 +11,7 @@ public class StreamEx {
         List<Integer> list = new ArrayList<>(Arrays.asList(-3, 5, 4, -7, 2, -6));
 
         List<Integer> listOut = list.stream()
-                .filter(x -> x >= 0)
+                .filter(x -> x > 0)
                 .collect(Collectors.toList());
     }
 }
