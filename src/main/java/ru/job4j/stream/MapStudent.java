@@ -8,6 +8,6 @@ public class MapStudent {
 
     public static Map<String, Student> toMapStudent(List<Student> list) {
         return list.stream()
-                .collect(Collectors.toMap(Student::getSurname, e -> e, (e1, e2) -> e1));
+                 .collect(Collectors.toMap(Student::getSurname, e -> e, (e1, e2) -> e1));
     }
 }
