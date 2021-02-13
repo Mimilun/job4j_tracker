@@ -16,10 +16,10 @@ public class MapStudentTest {
         Student st5 = new Student(69, "Petrova");
         Student st6 = new Student(68, "Sidorov");
 
-        List<Student> listStudent = new ArrayList<>(Arrays.asList(
+        List<Student> listStudent = new ArrayList<>(List.of(
                 st1, st2, st3, st4, st5, st6));
         Map<String, Student> expect = new LinkedHashMap<String, Student>();
-        
+
         expect.put("Ivanov", st1);
         expect.put("Petrov", st2);
         expect.put("Sidorov", st3);
