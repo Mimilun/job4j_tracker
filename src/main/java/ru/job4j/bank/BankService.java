@@ -37,6 +37,7 @@ public class BankService {
             for (Account el : users.get(user.get())) {
                 if (el.getRequisite().equals(requisite)) {
                     rsl = Optional.of(el);
+                    break;
                 }
             }
         }
